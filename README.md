@@ -1,1 +1,1 @@
-# Vue-Course Hu
+# Vue-Course
