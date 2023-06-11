@@ -6,7 +6,7 @@ export default {
       lastName: data.last,
       description: data.desc,
       hourlyRate: data.rate,
-      areas: data.areas
+      areas: data.areas,
     };
 
     const token = context.rootGetters.token;
@@ -16,7 +16,7 @@ export default {
         token,
       {
         method: 'PUT',
-        body: JSON.stringify(coachData)
+        body: JSON.stringify(coachData),
       }
     );
 
@@ -28,7 +28,7 @@ export default {
 
     context.commit('registerCoach', {
       ...coachData,
-      id: userId
+      id: userId,
     });
   },
   async loadCoaches(context, payload) {
@@ -55,12 +55,12 @@ export default {
         lastName: responseData[key].lastName,
         description: responseData[key].description,
         hourlyRate: responseData[key].hourlyRate,
-        areas: responseData[key].areas
+        areas: responseData[key].areas,
       };
       coaches.push(coach);
     }
 
     context.commit('setCoaches', coaches);
     context.commit('setFetchTimestamp');
-  }
+  },
 };
