@@ -10,9 +10,5 @@ export default function useAlert(startingVisibility = false) {
     alertIsVisible.value = false;
   }
 
-  return [
-    alertIsVisible,
-    showAlert,
-    hideAlert
-  ];
+  return [alertIsVisible, showAlert, hideAlert];
 }

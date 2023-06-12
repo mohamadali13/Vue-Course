@@ -4,10 +4,10 @@ export default function useSearch(items, searchProp) {
   const enteredSearchTerm = ref('');
   const activeSearchTerm = ref('');
 
-  const availableItems = computed(function() {
+  const availableItems = computed(function () {
     let filteredItems = [];
     if (activeSearchTerm.value) {
-      filteredItems = items.value.filter(item =>
+      filteredItems = items.value.filter((item) =>
         item[searchProp].includes(activeSearchTerm.value)
       );
     } else if (items.value) {
@@ -16,7 +16,7 @@ export default function useSearch(items, searchProp) {
     return filteredItems;
   });
 
-  watch(enteredSearchTerm, function(newValue) {
+  watch(enteredSearchTerm, function (newValue) {
     setTimeout(() => {
       if (newValue === enteredSearchTerm.value) {
         activeSearchTerm.value = newValue;
@@ -31,6 +31,6 @@ export default function useSearch(items, searchProp) {
   return {
     enteredSearchTerm,
     availableItems,
-    updateSearch
+    updateSearch,
   };
 }
