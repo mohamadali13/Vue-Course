@@ -28,27 +28,27 @@ export default {
 
     console.log(context);
 
-    onBeforeMount(function() {
+    onBeforeMount(function () {
       console.log('onBeforeMount');
     });
 
-    onMounted(function() {
+    onMounted(function () {
       console.log('onMounted');
     });
 
-    onBeforeUpdate(function() {
+    onBeforeUpdate(function () {
       console.log('onBeforeUpdate');
     });
 
-    onUpdated(function() {
+    onUpdated(function () {
       console.log('onUpdated');
     });
 
-    onBeforeUnmount(function() {
+    onBeforeUnmount(function () {
       console.log('onBeforeUnmount');
     });
 
-    onUnmounted(function() {
+    onUnmounted(function () {
       console.log('onUnmounted');
     });
 
